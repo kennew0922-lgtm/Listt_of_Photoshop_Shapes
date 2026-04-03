@@ -4,110 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List of Photoshop Shapes</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
-            color: #eeeeee;
-        }
+   <style>
+    /* --- ヘッダーエリア（高さを合計100pxに固定して計算しやすく！） --- */
+    .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background-color: #1a1a1a;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    }
 
-        /* --- ヘッダーエリア（バナー＋ナビをセットで固定） --- */
-        .fixed-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
+    /* 🌸 タイトルバナー（高さを65pxに固定） */
+    .title-banner {
+        background-color: #000000;
+        height: 65px; 
+        box-sizing: border-box;
+        padding: 15px 20px;
+        border-bottom: 1px solid #333;
+    }
 
-        /* バナー本体 */
-        .banner {
-            width: 100%;
-            height: 180px;
-            background: url('top1.webp') center/cover no-repeat;
-            display: block;
-        }
+    .title-banner h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #00a8ff;
+        border-left: 5px solid #008eb6;
+        padding-left: 15px;
+        line-height: 1.2;
+    }
 
-        /* 相互リンクバー（ナビゲーション） */
-        .nav-bar {
-            background-color: #000000; /* 真っ黒で引き締める */
-            display: flex;
-            justify-content: flex-end; /* 右寄せ（イメージ図通り） */
-            padding: 5px 10px;
-            border-bottom: 2px solid #008eb6; /* フォトショカラーのアクセント */
-        }
+    /* 🌸 ナビゲーションバー（高さを35pxに固定） */
+    .nav-bar {
+        background-color: #000000;
+        height: 35px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px; /* 上下パディングを抜いて中央寄せに */
+        align-items: center;
+        border-bottom: 2px solid #008eb6;
+    }
 
-        .nav-bar a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            padding: 5px 15px;
-            border-right: 1px solid #444; /* 区切り線 */
-            transition: color 0.3s, background-color 0.3s;
-        }
+    .nav-bar a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        padding: 0 15px;
+        line-height: 35px; /* 高さと同じにして中央に */
+        border-right: 1px solid #444;
+        transition: color 0.3s, background-color 0.3s;
+    }
 
-        .nav-bar a:last-child {
-            border-right: none;
-        }
+    /* --- コンテンツエリア --- */
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        /* 🌸 ヘッダーの合計100px + 余裕20px = 120px */
+        padding: 120px 20px 40px;
+    }
 
-        .nav-bar a:hover {
-            background-color: #333;
-            color: #00a8ff;
-        }
-
-        /* --- コンテンツエリア（余白を多めに！） --- */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            /* バナー(180px) + ナビ(約45px) + 余裕分で250px確保 */
-            padding: 50px 20px 40px;
-        }
-
-        .title-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 5px;
-            border-left: 5px solid #008eb6;
-            padding: 5px 0 5px 15px;
-        }
-
-        .title-area h2 {
-            margin: 0;
-            font-size: 1.5rem;
-            line-height: 1.2;
-        }
-
-        /* --- テーブルデザイン（共通） --- */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #2b2b2b;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #3d3d3d;
-        }
-
-        th {
-            background-color: #008eb6;
-            color: white;
-        }
-
-        /* 画像用クラス（シェイプページで使用） */
-        .preview-img {
-            max-width: 300px;
-            height: auto;
-            border-radius: 4px;
-        }
-    </style>
+    /* --- テーブルデザイン --- */
+    th {
+        background-color: #008eb6;
+        color: white;
+        position: sticky;
+        /* 🌸 ヘッダーの合計高さ 100px の位置にピッタリ吸着！ */
+        top: 100px; 
+        z-index: 100;
+        padding: 12px;
+        text-align: left;
+    }
+</style>
 </head>
 <body>
 
