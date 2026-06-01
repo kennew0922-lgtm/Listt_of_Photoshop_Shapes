@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shape List</title>
+    <title>Photoshop Manual Series</title>
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -13,68 +13,75 @@
             color: #eeeeee;
         }
 
-        /* --- 🌸 ヘッダー全体を固定（ここが大事！） --- */
+        /* --- ヘッダーエリア（バナー＋ナビをセットで固定） --- */
         .fixed-header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 9999; /* 重なり順を一番上に */
-            background-color: #1a1a1a;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
-        /* タイトルバナー（高さ65px） */
-        .title-banner {
-            background-color: #000000;
-            height: 65px; 
-            box-sizing: border-box;
-            padding: 15px 20px;
-            border-bottom: 1px solid #333;
+        /* バナー本体 */
+        .banner {
+            width: 100%;
+            height: 180px;
+            background: url('top1.webp') center/cover no-repeat;
+            display: block;
         }
 
-        .title-banner h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: #00a8ff;
-            border-left: 5px solid #008eb6;
-            padding-left: 15px;
-            line-height: 1.2;
-        }
-
-        /* ナビゲーションバー（高さ35px） */
+        /* 相互リンクバー（ナビゲーション） */
         .nav-bar {
-            background-color: #000000;
-            height: 35px;
-            box-sizing: border-box;
+            background-color: #000000; /* 真っ黒で引き締める */
             display: flex;
-            justify-content: flex-end;
-            padding: 0 10px;
-            align-items: center;
-            border-bottom: 2px solid #008eb6;
+            justify-content: flex-end; /* 右寄せ（イメージ図通り） */
+            padding: 10px 20px;
+            border-bottom: 2px solid #008eb6; /* フォトショカラーのアクセント */
         }
 
         .nav-bar a {
             color: #ffffff;
             text-decoration: none;
             font-size: 0.9rem;
-            padding: 0 15px;
-            line-height: 35px;
-            border-right: 1px solid #444;
-            transition: color 0.3s;
+            padding: 5px 15px;
+            border-right: 1px solid #444; /* 区切り線 */
+            transition: color 0.3s, background-color 0.3s;
         }
 
-        /* --- コンテンツエリア --- */
+        .nav-bar a:last-child {
+            border-right: none;
+        }
+
+        .nav-bar a:hover {
+            background-color: #333;
+            color: #00a8ff;
+        }
+
+        /* --- コンテンツエリア（余白を多めに！） --- */
         .container {
             max-width: 900px;
             margin: 0 auto;
-            /* 🌸 ヘッダーの合計(100px)＋余白分を確保 */
-            padding-top: 120px; 
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 40px;
+            /* バナー(180px) + ナビ(約45px) + 余裕分で250px確保 */
+            padding: 250px 20px 40px;
         }
 
+        .title-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 5px;
+            border-left: 5px solid #008eb6;
+            padding: 5px 0 5px 15px;
+        }
+
+        .title-area h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+
+        /* --- テーブルデザイン（共通） --- */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -83,89 +90,105 @@
             overflow: hidden;
         }
 
-        /* --- 🌸 運命の「Shape Name」バーの固定設定 --- */
-        th {
-            background-color: #008eb6;
-            color: white;
-            position: sticky;
-            /* 🌸 ヘッダー合計 100px の位置に吸着！ */
-            top: 0px; 
-            z-index: 100;
+        th, td {
             padding: 12px;
             text-align: left;
-        }
-
-        td {
-            padding: 16px;
             border-bottom: 1px solid #3d3d3d;
         }
 
+        th {
+            background-color: #008eb6;
+            color: white;
+        }
+
+        /* 画像用クラス（シェイプページで使用） */
         .preview-img {
             max-width: 300px;
             height: auto;
             border-radius: 4px;
+        }
+
+        /* 🌸 セクションタイトル（追加） */
+        .section-title {
+            background: #000;
+            color: #00f2fe;
+            padding: 8px 15px;
+            margin: 15px 0 15px 0;
+            font-size: 14px;
+            font-weight: bold;
+            border-left: 4px solid #00f2fe;
+            letter-spacing: 2px;
+            box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.2);
         }
     </style>
 </head>
 <body>
 
     <div class="fixed-header">
-        <div class="title-banner">
-            <h1>Shape List</h1>
-        </div>
+        <div class="banner"></div>
         <nav class="nav-bar">
-            <a href="https://kennew0922-lgtm.github.io/photoshopshortcuts-48-/">ショートカット</a>
-            <a href="https://kennew0922-lgtm.github.io/Listt_of_Photoshop_Shapes/">シェイプ</a>
-            <a href="https://kennew0922-lgtm.github.io/favorite_fonts/">フォント</a>
+            <a href="index.html">ショートカット</a>
+            <a href="shapes.html">シェイプ</a>
+            <a href="#">フォント</a>
         </nav>
     </div>
 
     <div class="container">
+        <div class="title-area">
+            <h2>List of Photoshop Shapes</h2>
+        </div>
+
         <table>
             <thead>
                 <tr>
-                    <th style="width: 30%;">Shape</th>
+                    <th style="width: 30%;">Shape Name</th>
                     <th style="width: 70%;">Preview</th>
                 </tr>
             </thead>
+
             <tbody>
+            <tr>
+                <td colspan="2" style="padding: 0;">
+                   <div class="section-title">従来のシェイプ</div>
+                </td>
+            </tr>               
                 <tr>
-                    <td>従来のデフォルトシェイプ</td>
+                    <td>デフォルトシェイプ</td>
                     <td><img src="shape1.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                <tr>
+                <tr>
                     <td>動物</td>
                     <td><img src="shape2.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                <tr>
+                <tr>
                     <td>矢印</td>
                     <td><img src="shape3.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                <tr>
+                <tr>
                     <td>アーティスティックテクスチャ</td>
                     <td><img src="shape4.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                <tr>
+                <tr>
                     <td>バナーと賞</td>
                     <td><img src="shape5.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                <tr>
+                <tr>
                     <td>フィルム</td>
                     <td><img src="shape6.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                <tr>
+                <tr>
                     <td>フレーム</td>
                     <td><img src="shape7.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                <tr>
+                <tr>
                     <td>液状のシミ</td>
                     <td><img src="shape8.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                <tr>
+                <tr>
                     <td>電球</td>
                     <td><img src="shape9.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                <tr>
+                <tr>
                     <td>音楽</td>
                     <td><img src="shape10.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
@@ -173,15 +196,15 @@
                     <td>自然</td>
                     <td><img src="shape11.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                 <tr>
+                <tr>
                     <td>オブジェクト</td>
                     <td><img src="shape12.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                                 <tr>
+                <tr>
                     <td>装飾</td>
                     <td><img src="shape13.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                                                 <tr>
+                <tr>
                     <td>図形</td>
                     <td><img src="shape14.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
@@ -189,18 +212,150 @@
                     <td>記号</td>
                     <td><img src="shape15.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                  <tr>
+                <tr>
                     <td>吹き出し</td>
                     <td><img src="shape16.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                                  <tr>
+                <tr>
                     <td>タイルし</td>
                     <td><img src="shape17.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
-                                                                  <tr>
+                <tr>
                     <td>Web</td>
                     <td><img src="shape18.png" alt="吹き出し" class="preview-img"></td>
                 </tr>
+
+            <tr>
+                <td colspan="2" style="padding: 0;">
+                   <div class="section-title">2019シェイプ</div>
+                </td>
+            </tr>
+
+                <tr>
+                    <td>針葉樹</td>
+                    <td><img src="shape19.png" alt="吹き出し" class="preview-img"></td>
+                </tr> 
+                <tr>
+                    <td>葉のない木</td>
+                    <td><img src="shape20.png" alt="吹き出し" class="preview-img"></td>
+                </tr> 
+                <tr>
+                    <td>森林と山</td>
+                    <td><img src="shape21.png" alt="吹き出し" class="preview-img"></td>
+                </tr> 
+                <tr>
+                    <td>湖と丘</td>
+                    <td><img src="shape22.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>葉</td>
+                    <td><img src="shape23.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>サボテン</td>
+                    <td><img src="shape24.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>道路と小川</td>
+                    <td><img src="shape25.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>スパイラル形状</td>
+                    <td><img src="shape26.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>人物</td>
+                    <td><img src="shape27.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>顔文字</td>
+                    <td><img src="shape28.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>ランドマーク</td>
+                    <td><img src="shape29.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>都市</td>
+                    <td><img src="shape30.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>建物</td>
+                    <td><img src="shape31.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>飛行機</td>
+                    <td><img src="shape32.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>車両1</td>
+                    <td><img src="shape33.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>車両2</td>
+                    <td><img src="shape34.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>家畜</td>
+                    <td><img src="shape35.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>水生動物</td>
+                    <td><img src="shape36.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>飛翔動物</td>
+                    <td><img src="shape37.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>昆虫とクモ類</td>
+                    <td><img src="shape38.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>両生類と爬虫類</td>
+                    <td><img src="shape39.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>海洋生物</td>
+                    <td><img src="shape40.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>恐竜</td>
+                    <td><img src="shape41.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>スポーツ用品</td>
+                    <td><img src="shape42.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>チェスとチェッカー</td>
+                    <td><img src="shape43.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>トランプのスーツ</td>
+                    <td><img src="shape44.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>電子ゲーム</td>
+                    <td><img src="shape45.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>標識</td>
+                    <td><img src="shape46.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>フラグ</td>
+                    <td><img src="shape47.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+                <tr>
+                    <td>ヘルメット</td>
+                    <td><img src="shape48.png" alt="吹き出し" class="preview-img"></td>
+                </tr>
+
+
+
+
+
                 </tbody>
         </table>
     </div>
