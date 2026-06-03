@@ -23,13 +23,6 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
-        /* バナー本体 */
-        .banner {
-            width: 100%;
-            height: 180px;
-            background: url('top1.webp') center/cover no-repeat;
-            display: block;
-        }
 
         /* 相互リンクバー（ナビゲーション） */
         .nav-bar {
@@ -63,7 +56,7 @@
             max-width: 900px;
             margin: 0 auto;
             /* バナー(180px) + ナビ(約45px) + 余裕分で250px確保 */
-            padding: 250px 20px 40px;
+            padding: 70px 20px 40px;
         }
 
         .title-area {
@@ -108,6 +101,24 @@
             border-radius: 4px;
         }
 
+                /* タイトルバナー（高さ65px） */
+        .title-banner {
+            background-color: #000000;
+            height: 65px; 
+            box-sizing: border-box;
+            padding: 15px 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .title-banner h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #00a8ff;
+            border-left: 5px solid #008eb6;
+            padding-left: 15px;
+            line-height: 1.2;
+        }
+
         /* 🌸 セクションタイトル（追加） */
         .section-title {
             background: #000;
@@ -125,7 +136,9 @@
 <body>
 
     <div class="fixed-header">
-        <div class="banner"></div>
+        <div class="title-banner">
+            <h1>List of Shapes</h1>
+        </div>
         <nav class="nav-bar">
             <a href="https://kennew0922-lgtm.github.io/photoshopshortcuts-48-/">ショートカット</a>
             <a href="https://kennew0922-lgtm.github.io/Listt_of_Photoshop_Shapes/">シェイプ</a>
@@ -134,9 +147,6 @@
     </div>
 
     <div class="container">
-        <div class="title-area">
-            <h2>List of Photoshop Shapes</h2>
-        </div>
 
         <table>
             <thead>
