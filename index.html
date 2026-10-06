@@ -106,7 +106,8 @@
         th, td {
             padding: 12px;
             text-align: left;
-            border-bottom: 1px solid #3d3d3d;
+            border-bottom: 1px solid #3d3d3d;    /* ★薄いグレーの区切り線 */
+            border-right: 1px solid #3d3d3d; /* 横線と同じ落ち着いたグレー */
         }
 
         th {
@@ -121,7 +122,7 @@
             border-radius: 4px;
         }
 
-                /* タイトルバナー（高さ65px） */
+        /* タイトルバナー（高さ65px） */
         .title-banner {
             background-color: #000000;
             height: 65px; 
@@ -151,6 +152,39 @@
             letter-spacing: 2px;
             box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.2);
         }
+
+                /* 🌸 セクションタイトル（追加） */
+        .section-title-second {
+            background: #000;
+            color: #00f2fe;
+            padding: 8px 15px;
+            margin: 15px 0 -5px 0;
+            font-size: 14px;
+            font-weight: bold;
+            border-left: 4px solid #00f2fe;
+            letter-spacing: 2px;
+            box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.2);
+        }
+
+        /* 🌸 解説画像を入れる専用枠BOX */
+        .img-box {
+            display: inline-block;
+            border: 1px solid #008eb6;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 168, 255, 0.25);
+            background-color: #000000;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            margin-left: 1.5em;
+            overflow: hidden;
+        }
+
+        .img-box img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
     </style>
 </head>
 <body>
@@ -416,17 +450,21 @@
                    <div class="section-title">自作シェイプ作成方法</div>
                 </td>
             </tr>
-            1.ペンツールでパスを作成<br>
-              ＊パスからシェイプに変更する必要があります<br>
+            &emsp;&emsp;1.ペンツールでパスを作成<br>
+              &emsp;&emsp;*パスからシェイプに変更する必要があります<br>
               <br>
-              <img src="shape53.png" alt="吹き出し" class="preview-img">
+              &emsp;<div class="img-box">
+            <img src="https://socrarius-tool.com/Listt_of_Photoshop_Shapes/shape53.png">
+            </div>
               <br>
               <br>
-            2.シェイプができたら「カスタムシェイプを定義」<br>
+            &emsp;&emsp;2.シェイプができたら「カスタムシェイプを定義」<br>
             <br>
-            <img src="shape54.png" alt="吹き出し" class="preview-img">
+            &emsp;<div class="img-box">
+            <img src="https://socrarius-tool.com/Listt_of_Photoshop_Shapes/shape54.png">
+            </div>
             <br>
-            以上で完成です。<br>
+            &emsp;&emsp;以上で完成です。<br>
             <br>
             <br>
            <tr>
@@ -434,28 +472,36 @@
                    <div class="section-title">自作シェイプ作成方法2</div>
                 </td>
             </tr>
-            1.画像を描きます<br>
+            &emsp;&emsp;1.画像を描きます<br>
              <br>
-             <img src="shape58.png" alt="吹き出し" class="preview-img">
+            &emsp;<div class="img-box">
+            <img src="https://socrarius-tool.com/Listt_of_Photoshop_Shapes/shape58.png">
+            </div>
             <br>
-            2.クイック選択ツールを選択して画像を選択します<br>
+            &emsp;&emsp;2.クイック選択ツールを選択して画像を選択します<br>
             <br>
-            <img src="shape55.png" alt="吹き出し" class="preview-img">
-            <br>
-            <br>
-            3.画像が選択されている状態で右クリック<br>
-            &nbsp;&nbsp;「作業用パスを作成」を選択します<br>
-            <br>
-            <img src="shape56.png" alt="吹き出し" class="preview-img">
+            &emsp;<div class="img-box">
+            <img src="https://socrarius-tool.com/Listt_of_Photoshop_Shapes/shape55.png">
+            </div>
             <br>
             <br>
-            4.シェイプツールを選択して「カスタムシェイプを定義」<br>
+            &emsp;&emsp;3.画像が選択されている状態で右クリック<br>
+            &emsp;&emsp;&nbsp;&nbsp;「作業用パスを作成」を選択します<br>
             <br>
-            以上で完成です。<br>
+            &emsp;<div class="img-box">
+            <img src="https://socrarius-tool.com/Listt_of_Photoshop_Shapes/shape56.png">
+            </div>
             <br>
-            <img src="shape57.png" alt="吹き出し" class="preview-img">
             <br>
-            シェイプ名を決めて保存してください。<br>
+            &emsp;&emsp;4.シェイプツールを選択して「カスタムシェイプを定義」<br>
+            <br>
+            &emsp;&emsp;以上で完成です。<br>
+            <br>
+            &emsp;<div class="img-box">
+            <img src="https://socrarius-tool.com/Listt_of_Photoshop_Shapes/shape57.png">
+            </div>
+            <br>
+            &emsp;&emsp;シェイプ名を決めて保存してください。<br>
             <br>
             <br>
     </div>
